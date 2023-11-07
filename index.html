@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      form {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button[type="submit"] {
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      #save {
+        background-color: #4caf50;
+      }
+      #remove {
+        background-color: red;
+      }
+
+      button[type="submit"]:last-child {
+        margin-right: 0;
+      }
+
+      #current-value {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      button[type="button"] {
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        background-color: yellowgreen;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <form type="submit">
+      <p id="current-value"></p>
+      <label for="nome">Nome:</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        placeholder="Inserisci il tuo nome"
+      />
+      <button type="submit" id="save">Save value</button>
+      <button type="submit" id="remove">Remove value</button>
+    </form>
+    <h1>Press the button to restart</h1>
+    <button type="button">Refresh</button>
+    <div id="timer"></div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
