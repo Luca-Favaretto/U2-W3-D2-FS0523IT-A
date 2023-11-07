@@ -50,7 +50,7 @@
         background-color: #4caf50;
       }
       #remove {
-        background-color: red;
+        background-color: rgb(164, 12, 12);
       }
 
       button[type="submit"]:last-child {
@@ -86,6 +86,40 @@
         transform: translate(-50%, -50%);
         margin: 0px;
       }
+      #show {
+        background-color: red;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-inline: auto;
+        display: block;
+        margin-top: 2rem;
+      }
+      #content {
+        display: flex;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+      }
+      .col {
+        width: 33%;
+        padding: 10px;
+      }
+      .card {
+        background-color: aquamarine;
+        border-radius: 10px;
+      }
+      .card img {
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      .card > div > h2 {
+        text-align: center;
+      }
+      .card > div {
+        padding: 10px;
+      }
     </style>
     <title>Document</title>
   </head>
@@ -107,7 +141,48 @@
     <div id="timer">
       <p>0</p>
     </div>
+    <button type="button" id="show">pls don't push</button>
+    <div id="content">
+      <!-- <div class="col">
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+            quaerat debitis est cupiditate adipisci culpa sapiente blanditiis
+            nihil corrupti consectetur, soluta repudiandae quam eius, veniam
+            laudantium pariatur quia asperiores recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+            quaerat debitis est cupiditate adipisci culpa sapiente blanditiis
+            nihil corrupti consectetur, soluta repudiandae quam eius, veniam
+            laudantium pariatur quia asperiores recusandae.
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2Zlc3NvcmV8ZW58MHx8MHx8fDA%3D"
+            alt="img di un prof"
+          />
 
+          <div>
+            <h2>${prof.name} ${prof.surname}</h2>
+            <ul>
+              ${prof.units.map(unit => `
+              <li>${unit}</li>
+              `).join("")}
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <script src="./js/prof.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

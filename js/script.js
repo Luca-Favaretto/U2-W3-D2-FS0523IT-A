@@ -16,6 +16,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const TIME_BTN = document.querySelector('button[type="button"] ');
   TIME_BTN.onclick = newItemDate;
   setInterval(timePassed, 1000);
+
+  /////////extra
+  const WARNING_BTN = document.getElementById("show");
+  WARNING_BTN.onclick = createCard;
 });
 
 const addLocalName = function (e) {
@@ -49,4 +53,29 @@ const timePassed = function () {
   let p = document.createElement("p");
   p.innerHTML = diffTime;
   divTime.appendChild(p);
+};
+/////// test card create
+
+const createCard = function () {
+  const containerCard = document.getElementById("content");
+
+  profs.forEach(prof => {
+    const col = document.createElement("div");
+    col.classList.add("col");
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+        <img src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2Zlc3NvcmV8ZW58MHx8MHx8fDA%3D"
+        alt="img di un prof" />
+        <div>
+          <h2>${prof.name} ${prof.surname}</h2>
+          <ul>
+            ${prof.units.map(unit => ` <li>${unit}</li>`).join("")}
+          </ul>
+        </div>
+      `;
+
+    col.appendChild(card);
+    containerCard.appendChild(col);
+  });
 };
