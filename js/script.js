@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
   divTime.appendChild(p);
   newItemDate();
   const TIME_BTN = document.querySelector('button[type="button"] ');
-  TIME_BTN.onclick = newItemDate;
+  TIME_BTN.onclick = () => localStorage.setItem("date-item", new Date());
   setInterval(timePassed, 1000);
 
   /////////extra
