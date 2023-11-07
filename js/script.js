@@ -64,6 +64,7 @@ const createCard = function () {
     col.classList.add("col");
     const card = document.createElement("div");
     card.classList.add("card");
+    hide(card);
     card.innerHTML = `
         <img src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2Zlc3NvcmV8ZW58MHx8MHx8fDA%3D"
         alt="img di un prof" />
@@ -77,5 +78,10 @@ const createCard = function () {
 
     col.appendChild(card);
     containerCard.appendChild(col);
+  });
+};
+const hide = function (card) {
+  card.addEventListener("click", function () {
+    card.remove();
   });
 };
