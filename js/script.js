@@ -12,6 +12,11 @@ window.addEventListener("DOMContentLoaded", () => {
   RED_BTN.onclick = removeLocalName;
 
   //////////////////////////////////////////
+  const divTime = document.getElementById("timer");
+  const p = document.createElement("p");
+  const firstDate = new Date(localStorage.getItem("date-item"));
+  p.innerText = Math.floor((new Date() - firstDate) / 1000);
+  divTime.appendChild(p);
   newItemDate();
   const TIME_BTN = document.querySelector('button[type="button"] ');
   TIME_BTN.onclick = newItemDate;
