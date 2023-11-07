@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        color-scheme: dark;
+      }
       body {
         font-family: Arial, sans-serif;
         margin: 20px;
       }
 
       form {
-        background-color: #f4f4f4;
+        background-color: rgb(194, 194, 3);
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -64,6 +70,22 @@
         margin-right: 10px;
         background-color: yellowgreen;
       }
+      #timer {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin-inline: auto;
+        background-color: #4caf50;
+        position: relative;
+      }
+      #timer > p {
+        font-size: 3em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px;
+      }
     </style>
     <title>Document</title>
   </head>
@@ -82,7 +104,9 @@
     </form>
     <h1>Press the button to restart</h1>
     <button type="button">Refresh</button>
-    <div id="timer"></div>
+    <div id="timer">
+      <p>0</p>
+    </div>
 
     <script src="./js/script.js"></script>
   </body>

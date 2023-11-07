@@ -15,7 +15,7 @@ window.addEventListener("DOMContentLoaded", () => {
   newItemDate();
   const TIME_BTN = document.querySelector('button[type="button"] ');
   TIME_BTN.onclick = newItemDate;
-  setInterval(timePassed, 200);
+  setInterval(timePassed, 1000);
 });
 
 const addLocalName = function (e) {
@@ -41,11 +41,11 @@ const newItemDate = function () {
 const timePassed = function () {
   const firstDate = new Date(localStorage.getItem("date-item"));
   const diffTime = Math.floor((new Date() - firstDate) / 1000);
-  console.log(diffTime);
   const divTime = document.getElementById("timer");
   while (divTime.firstChild) {
     divTime.firstChild.remove();
   }
+
   let p = document.createElement("p");
   p.innerHTML = diffTime;
   divTime.appendChild(p);
