@@ -40,7 +40,9 @@ const removeLocalName = function (e) {
   valueToTake.value = "";
 };
 const newItemDate = function () {
-  localStorage.setItem("date-item", new Date());
+  if (!localStorage.getItem("date-item")) {
+    localStorage.setItem("date-item", new Date());
+  }
 };
 const timePassed = function () {
   const firstDate = new Date(localStorage.getItem("date-item"));
